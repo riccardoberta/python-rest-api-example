@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "118b53f0-1c82-4298-bd01-a13ba8c8bd34",
+		"name": "Python REST API Template",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Request info",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "68330f51-e3d6-4304-98ff-ace2f59defeb",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "text/plain"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Build a new resource (POST)",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "3f1c1d56-98f8-4d74-bb3e-c4eb0f99ac95",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"field\": \"content\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/resource",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"resource"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read a resource (GET)",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "84713e5c-77ce-4d37-bb99-49aaf58b741f",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/resource/id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"resource",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify a resource (PUT)",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0f70f0bd-b4cf-454e-b930-7b452236a5a9",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"field\": \"new content\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/resource/id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"resource",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a resource (DELETE)",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "974c2b8b-7cf8-4ade-932d-764e99b74da7",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/resource/id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"resource",
+						"id"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
