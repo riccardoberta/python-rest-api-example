@@ -5,7 +5,6 @@ RUN pip install -r /requirements.txt
 
 COPY src/ /app
 COPY README.md /app/.
-COPY config.json /app/.
 WORKDIR /app
 
 CMD [ "python", "server.py" ]
